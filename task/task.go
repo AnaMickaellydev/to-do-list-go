@@ -1,6 +1,10 @@
 package task
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
 
 type Task struct {
 	ID       int
@@ -22,4 +26,37 @@ func (t Task) Print() {
 		status = "✅"
 	}
 	fmt.Printf("[%s] %d - %s/n", status, t.ID, t.Name)
+}
+
+func SaveTasksToFile(filename string, tasks []Task) error {
+	data, err := json.MarshalIndent(tasks, "", " ")
+	if err != nil {
+		return err
+	}
+
+	err = os.WriteFile(filename, data, 0644)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func LoadTasksFromFile(filename string) ([]Task, error) {
+	file, err := os.ReadFile(filename)
+	if err != nil {
+		if os.IsNotExist(err) {
+
+			return []Task{}, nil
+		}
+		return nil, err
+	}
+
+	var tasks []Task
+	err = json.Unmarshal(file, &tasks)
+	if err != nil {
+		return nil, err
+	}
+
+	return tasks, nil
 }
