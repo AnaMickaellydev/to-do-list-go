@@ -1,18 +1,33 @@
-# To-Do List in Go 📝
+<h1 align="center">
+  <a href="#">To-Do List in Go</a>
+</h1>
 
-This is a simple **to-do list** application created to **practice** Go (Golang) features. The focus is on practicing file handling, user interaction, and other essential functionalities of the language.
+<p align="center">🧠 A simple CLI To-Do application built with Golang to train core features like file handling, user input, and project structuring.</p>
+
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=go&message=language&color=00ADD8&style=for-the-badge&logo=go"/>
+  <img src="https://img.shields.io/static/v1?label=status&message=in%20progress&color=orange&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=green&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=made%20with&message=coffee%20%26%20love&color=ff69b4&style=for-the-badge"/>
+</p>
 
 ---
 
 ## 🚀 Features
 
-- **Add a task**: Create a new task.
-- **List tasks**: Display all tasks, including their completion status.
-- **Mark task as completed**: Toggle the completion status of a task.
-- **Remove task**: Delete a task from the list.
-- **Persistence**: Tasks are saved in a **JSON** file to persist data between app executions.
+- ✅ Add tasks  
+- 📋 List all tasks  
+- ✔️ Mark tasks as completed  
+- 🗑️ Remove tasks  
+- 💾 Save tasks to a JSON file  
 
 ---
+
+## 📦 Tech Stack
+
+- [Go (Golang)](https://golang.org/)  
+- JSON for local data persistence  
+- Terminal
 
 ## 🛠 Requirements
 
